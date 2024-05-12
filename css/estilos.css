@@ -1,0 +1,322 @@
+/* ---------------------------- archivo CSS ---------------------------- */
+/* esto es un comentario en CSS */
+/* --------------------------------------------------------------------- */
+/*  HOJA EXTERNA DE ESTILOS */
+/*  para ser empleada por cualquier hoja HTML de un proyecto */
+/* --------------------------------------------------------------------- */
+
+/* CSS (Cascading Style Sheets)
+
+es un lenguaje que consiste en una serie de elementos mediante los cuales
+se declaran los estilos, básicamente éstos son los más importantes:
+
+    ● Selectores, mediante los cuales podemos especificar
+    a qué elementos de la página pretendemos afectar
+
+    ● Atributos, para definir qué propiedad pretendemos
+    modificar sobre los selectores indicados
+
+    ● Valores, que indican qué estilo se debe aplicar
+    a cada atributo sobre cada selector
+
+no es aconsejable colocar estilos en el atributo "style"
+de las etiquetas HTML (admitido en todas las etiquetas)
+ni dentro de la etiqueta style en el head del archivo HTML
+
+una buena práctica es disponer el código CSS en un archivo aparte
+*/
+/* --------------------------------------------------------------------- */
+
+/* SELECTORES - permiten seleccionar grupos de elementos
+
+SIMPLES
+*                           todos los elementos
+etiqueta_elemento           todos los elementos etiqueta_elemento
+.nombre_clase               todos los elementos con atributo class="nombre_clase"
+#nombre_id                  todos los elementos con con atributo id="nombre_id"
+[nombre_atributo]           todos los elementos con atributo nombre_atributo definido en el archivo html
+[nombre_atributo="valor"]   todos los elementos cuyo atributo nombre_atributo="valor" definido en el archivo html
+
+etiqueta_elemento           - definido en HTML (div, p, etc.)
+nombre_atributo             - definido en HTML (class, id, type, name, value, etc.)
+nombre_clase                - definido por usuario (class="nombre__clase")
+nombre_id                   - definido por usuario (id="nombre_id")
+valor                       - definido por usuario (nombre_clase, nombre_id, etc.)
+
+COMBINACIONES
+div,p                       todos los elementos "div" y todos los elementos "p"
+div p                       todos los elementos "p" dentro de un elemento "div"
+div>p                       todos los elementos "p" que se encuentren un nivel dentro de un elemento "div"
+div+p                       todos los elementos "p" que se encuentren inmediatamente después de un elemento "div"
+div~p                       todos los elementos "p" que se encuentren inmediatamente antes de un elemento "div"
+div.nombre_clase            todos los elementos "div" con clase "nombre_clase"
+div#nombre_ID               todos los elementos "div" con identificador "nombre_ID"
+#nombre_ID *                todos los elementos con identificador "nombre_ID"
+
+PSEUDO CLASES               Permiten definir estados especiales a un elemento
+
+                            selector:pseudoclase
+
+                            selector        - cualquier selector simple
+                            pseudoclase     - definido en CSS (ver ejemplos a continuación)
+
+hover	                    atributo al pasar el ratón por encima de lo indicado en el selector
+not(selector)               selecciona los elementos que no correspondan al selector
+
+link                        enlace en estado normal
+active                      enlace al hacer click
+visited                     enlace luego de hacer click
+
+PSEUDO ELEMENTOS            Permiten definir atributos a partes específicas de un elemento
+
+                            selector::pseudoelemento
+
+                            selector        - cualquier selector simple
+                            pseudoelemento  - definido en CSS (ver ejemplos a continuación)
+
+after                       inserta algo después del contenido de los elementos seleccionados
+before                      inserta algo antes del contenido de los elementos seleccionados
+first-letter                selecciona la primera letra de los elementos seleccionados
+first-line                  selecciona la primera línea de los elementos seleccionados
+selection	                selecciona la parte seleccionada por el usuario de los elementos seleccionados
+marker                      selecciona los marcadores de los elementos de la lista
+
+SELECTORES DE ATRIBUTOS     Permiten seleccionar los elementos con un atributo específico
+
+                            selector[atributo="valor"]
+
+                            selector    - cualquier tipo de selector
+                            atributo    - definido en CSS
+                            valor       - definido por el usuario en base a la sintaxis de CSS
+
+                            selector[atributo]
+                            contiene el atributo (sin importar su valor)
+
+                            selector[atributo~="valor"]
+                            el atributo contiene la expresión "valor"
+
+                            selector[atributo|="valor"]
+                            el atributo comienza con la expresión "valor"
+
+                            selector[atributo^="valor"]
+                            el atributo contiene la expresión "valor"
+
+                            selector[atributo$="valor"]
+                            el atributo termina con la expresión "valor"
+
+                            selector[atributo*="valor"]
+                            el atributo contiene la subcadena "valor"
+*/
+/* --------------------------------------------------------------------- */
+
+/* INFORMACIÓN
+
+Los estilos se heredan de una etiqueta a otra. Por ejemplo, si tenemos
+declarado en el <BODY> unos estilos, estas declaraciones también afectarán
+a otras etiquetas que estén dentro de esta etiqueta.
+
+La herencia de estilos desde padres a hijos no ocurre siempre. Depende del
+estilo utilizado. Por ejemplo, el color del texto se hereda en todos los
+componentes, aunque no ocurre con el borde de un elemento.
+
+Las declaraciones de estilos se pueden realizar de múltiples modos y con
+varias etiquetas, también entre estos modos hay una jerarquía de importancia
+para resolver conflictos entre varias declaraciones de estilos distintas
+para una misma porción de página. Se puede ver a continuación esta jerarquía,
+primero ponemos las formas de declaración más generales, y por tanto menos
+respetadas en caso de conflicto:
+
+● Declaración de estilos con fichero externo (para todo un sitio web)
+● Declaración de estilos para toda la página (con la etiqueta <STYLE>
+en la cabecera de la página)
+● Definidos en una etiqueta en concreto (utilizando el atributo style
+en la etiqueta en cuestión)
+*/
+/* --------------------------------------------------------------------- */
+
+* /* estilos que se aplican a todos los elementos */
+  /* salvo que sean redefinidos posteriormente (efecto cascada) */
+{
+    color: blueviolet;
+    font-family: 'Roboto', sans-serif; /*tipografía*/
+    font-size: 12pt;
+}
+
+nav /* estilo para barra de navegación */
+{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px;
+    border: solid #38d4b7 10px;
+}
+
+body /* estilo para el cuerpo */
+{
+    background-color : #c9d4c9
+}
+
+p /* estilo para párrafo */
+{ 
+    box-sizing: border-box;
+    width: 50%;
+    color: blue;
+    text-align: justify;
+    background-color: cyan;
+    border: 2px solid blue;
+}
+
+span /* estilo para tramo*/
+{ 
+    color: blue;
+    background-color: cyan;
+    border: 2px solid blue;
+    padding: 5px;
+    margin: 5px;
+}
+
+h1 /* estilo para el título de 1º nivel */
+{
+    margin-top: 50px;
+    margin-right: 100px;
+    margin-bottom: 50px;
+    margin-left: 100px;
+    padding: 30px 10px 30px 10px;  /* arriba derecha abajo izquierda*/
+    border: 2px solid black;
+    background-color: yellow;
+    color: gray;
+    font-weight: bold;
+    font-size: 24pt;
+    text-align: center;
+}
+
+h2 /* estilo para el título de 2º nivel */
+{
+    box-sizing: content-box;
+    width: 50%;
+    padding: 5px;
+    border: solid #5B6DCD 10px;
+    text-decoration: underline;
+}
+/* box-sizing: content-box
+    el ancho de cualquier borde o relleno ser añadirá
+    al ancho de la caja es el valor por defecto */
+
+h3 /* estilo para el título de 3º nivel */
+{
+    box-sizing: border-box;
+    width: 50%;
+    padding: 5px;
+    border: solid #5B6DCD 10px;
+}
+/* box-sizing: border-box
+    el ancho de cualquier borde o relleno ser inlcuirá
+    en el ancho de la caja */
+
+h4 /* estilo para el título de 4º nivel */
+{
+    box-sizing: border-box;
+    width: 30%;
+    padding: 5px;
+    border: solid #c95bcd 10px;
+}
+
+h5 /* estilo para el título de 5º nivel */
+{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px;
+    border: solid #de438e 10px;
+}
+
+h6 /* estilo para el título de 6º nivel */
+{
+    box-sizing: border-box;
+    width: 20%;
+    padding: 5px;
+    border: solid #e4a348 10px;
+}
+
+th /* estilo para encabezados de tablas */
+{
+    box-sizing: border-box;
+    width: 20%;
+    padding: 5px;
+    border: solid #e4a348 10px;
+}
+
+td /* estilo para datos de tablas */
+{
+    box-sizing: border-box;
+    width: 20%;
+    padding: 5px;
+    border: solid #e4a348 10px;
+    background-color : white;
+    text-align: center;
+}
+
+div, section, article /* estilo para división, sección y artículo */
+{
+    box-sizing: border-box;
+    width: 50%;
+    border: 10px solid green;
+    padding: 5px;
+    margin: 5px;
+}
+
+marquee h4 /* estilo para título dentro de marquesina */
+{
+    text-align: center;
+}
+
+video {height:240px} /* estilo para los bloques de video */
+
+iframe.largo /* estilo para iframe clase largo*/
+{
+    height:1000px;
+    width:500px;
+}
+
+#mi_identificador /* estilo para un ID */
+{
+    width:400px;
+    height:400px;
+    margin-top:40px;
+    margin-bottom:40px;
+    margin-left:40px;
+    margin-right:40px;
+}
+
+#mi_identif
+{
+    width:880px;
+    margin-top:40px;
+    margin-bottom:40px;
+    margin-left:40px;
+    margin-right:40px;
+}
+
+.mi_clase /* estilo para una clase */
+{
+    color:white;
+    background-color : black;
+    font-weight: bold;
+}
+
+button.mi_clase /* estilo para botones con clase mi_clase */
+{
+    border: 5px solid red;
+}
+
+
+a:link {color: magenta;}        /* estilo para links sin clickear */
+a:active {color: red;}          /* estilo para links al hacer click */
+a:visited {color: orangered;}   /* estilo para links después de hacer click */
+a:hover {color: black;}         /* estilo al pasar el cursor por encima del link*/
+
+table td:hover {background-color:gray;} /* estilo para celdas de datos en tablas */
+
+nav a:hover {background-color: #38d4b7;} /* estilo para opciones de barra de navegación */
+
+h4::first-letter {background-color: blueviolet; color: #c9d4c9;} /* estilo para la primera letra de los h4 */
+
+[target="_blank"] {background-color: white;} /* estilo para un enlace que se abre en una nueva página */
