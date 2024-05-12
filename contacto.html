@@ -1,0 +1,136 @@
+<!------------------------------------------------------------------------------------>
+<!DOCTYPE html><!-- incio del código html -->
+<html lang="es"><!-- lenguaje de la página web -->
+<!------------------------------------------------------------------------------------>
+<head><!-- inicio de la cabecera del código de la página web -->
+
+    <!-- título que aparece en la solapa de la página web (máximo 60-70 caracteres) -->
+    <title>Mundo Peludo - Contacto</title>
+
+    <!-- juego de caracteres a emplear -->
+    <meta charset="UTF-8">
+
+    <!-- instrucción para especificar el modo de compatibilidad a Internet Explorer -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- configuración de la ventana gráfica -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- descripción de la página para buscadores (máximo 155 caracteres) -->
+    <meta name="description" content="Mundo Peludo - Contacto" />
+
+    <!-- Open Graph Data -->
+    <!-- datos para informar del contenido que estamos publicando -->
+    <!-- a los rastreadores de las redes sociales -->
+    <meta property="og:title" content="titulo" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content=" http://www.example.com" />
+    <meta property="og:image" content=" http://example.com/image.jpg" />
+    <meta property="og:description" content="descripcion-contenido" />
+
+    <!-- ícono de página - ícono de favoritos (favicon) -->
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico" >
+
+    <!-- hoja de estilos -->
+    <link rel="stylesheet" type="text/css" href="css/estilos.css" />
+
+    <!-- tipografía externa (extraida de https://fonts.google.com/) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+</head><!-- fin de la cabecera del código de la página web -->
+<!------------------------------------------------------------------------------------>
+<header><!-- inicio del encabezado visual la página web -->
+    <!-- título de la página web-->
+    <h1 style="color:red">MUNDO PELUDO</h1>
+    <!-- barra de navegación -->
+    <nav align="center">
+        <a href="/index.html">Inicio</a>
+        <a href="/nosotros.html">Nosotros</a>
+        <a href="/servicios.html">Servicios</a>
+        <a href="/tienda.html">Tienda</a>
+        <a href="/contacto.html">Contacto</a>
+    </nav>
+
+</header><!-- fin del encabezado visual de la página web -->
+<!------------------------------------------------------------------------------------>
+<hr><!-- línea horizontal de separación -->
+<!------------------------------------------------------------------------------------>
+<body><!-- inicio del cuerpo de la página contacto -->
+
+    <h3>Fomulario de Contacto</h3>
+
+    <form
+    action="mailto:direccion@correo.com" 
+    method="post"
+    >
+        <label>Nombre</label>
+        <input type="text" name="nombre" placeholder="Ingrese su nombre"/><br>
+        <label>Apellido</label>
+        <input type="text" name="apellido"placeholder="Ingrese su apellido"/><br>
+        <label>Género</label><br>
+        <input type="radio" name="genero" value="masculino" checked> Masculino <br>
+        <input type="radio" name="genero" value="femenino"> Femenino <br>
+        <label>Sucursal</label>
+        <select name="sucursal">
+            <option selected>Centro</option>
+            <option>Barrio Norte</option>
+            <option>Barrio Sur</option>
+            <option>Barrio Este</option>
+            <option>Barrio Oeste</option>
+        </select><br>
+        <label>E-mail</label>
+        <input type="email" name="email"placeholder="Ingrese su e-mail"/><br>
+        <label>Indíquenos su consulta</label><br>
+        <input type="text" name="consulta" placeholder="Escriba aquí"/><br>
+        <input type="checkbox" name="recibir_info" checked> Deseo recibir información<br>
+        <input type="reset" value="Borrar todo"><br>
+        <input type="submit" value="Enviar"><br>
+    </form>
+    <!--
+        El valor introducido por teclado o seleccionado de las opciones se almacena
+        en la variable cuyo nombre se indica en name
+
+        Opciones:
+        ● required: el formulario no se podrá enviar hasta que ese campo tenga contenido.
+        ● placeholder: si queremos que aparezca un texto de ayuda para rellenar el campo.
+        ● value: para introducir un valor por defecto en el campo.
+    -->
+    
+    <hr><!-- línea horizontal de separación -->
+
+    <h3>Sucursales</h3>
+    <p>Sucursal Centro</p>
+    <p>Dirección</p>
+    <p>Teléfono</p>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.7749705717506!2d-64.23806569999999!3d-31.365188399999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432993474d5d5fb%3A0x2e47e649a3e21e5e!2sLuis%20Jose%20de%20Tejeda%204595%2C%20X5000CEH%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1715527572987!5m2!1ses-419!2sar"
+        width="300"
+        height="250"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+
+</body><!-- fin del cuerpo de la página contacto -->
+<!------------------------------------------------------------------------------------>
+<hr><!-- línea horizontal de separación -->
+<!------------------------------------------------------------------------------------>
+<footer>
+    <!-- email al administrador de la página -->
+    <h5 align="center">
+        Si encuentra algún inconveniente en esta página, por favor indíquenos aquí:
+        <a href="
+            mailto:administrador@alef.com
+            &subject=Inconvenientes en la página 'Contacto'
+            &body=Por favor describa aquí cual es el inconveniente
+        ">
+        enviar e-mail
+        </a>
+    </h5>
+</footer>
+<!------------------------------------------------------------------------------------>
+</html><!-- fin del código html -->
+<!------------------------------------------------------------------------------------>
