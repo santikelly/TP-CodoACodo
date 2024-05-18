@@ -16,12 +16,13 @@ let navegacion=`
 </div>
 <nav>
  <ul class="nav-link">
+     <li><a href="./Productos.html">Productos</a></li>
      <li><a href="./Servicios.html">Servicios</a></li>
      <li><a href="./Sucursales.html">Sucursales</a></li>
      <li><a href="./Nosotros.html">Nosotros</a></li>
  </ul>
 </nav>
-<a href="./Registro.html" class="btn"><button>Registrese</button></a>
+<a href="./Registro.html" class="btn"><button>Contactenos</button></a>
 `
 document.querySelector("header").innerHTML=navegacion
 
@@ -30,6 +31,7 @@ let pie=`
         <a href="https://www.facebook.com/naturallifepet"><img src="./img/facebook.png" alt=""></a>
         <a href="https://www.instagram.com/natural_life_pet/"><img src="./img/instagram.png" alt=""></a>
         <a href="https://api.whatsapp.com/send?phone=5491167026320"><img src="./img/whatsapp.png" alt=""></a>
+        <p>Autores: Velasco Lucas - Santiago - Juan - Marcos</p>
 `
 
 document.querySelector("footer").innerHTML=pie
