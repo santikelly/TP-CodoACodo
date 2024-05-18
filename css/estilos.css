@@ -1,3 +1,5 @@
+/* --------------- css general --------------------- */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,6 +9,7 @@
     
 }
 
+/* --------------- css de header ------------------- */
 .header {
     background-color: #ECF7FD;
     display: flex;
@@ -159,7 +162,7 @@ footer a img{
     max-width: 2%;
 }
 
-/*--------Css de registro------*/
+/* --------------- css de registro ----------------- */
 
 main .formulario{
     display: flex;
@@ -171,8 +174,7 @@ main .form{
     background-color: darkgrey;
 }
 
-/*------Css de Sucursales------*/
-
+/* --------------- css de sucursales --------------- */
 
 main .sucursales{
     display: flex;
@@ -180,75 +182,63 @@ main .sucursales{
 justify-content: space-around;
 }
 
-/*----Css de Servicios------*/
+/* --------------- css de servicios ---------------- */
 
-.pag-servicios{
-    padding: 1% 5%;
-    background-image: url(../img/ocico.jpg);
-    background-repeat: no-repeat;
-    background-size: cover; 
+h4 /* titulos de servicios */
+{
+    box-sizing: border-box;
+    width: 100%;
 }
 
-main section .bar{
-    padding: 50px;
+section /* contenedor para servicios */
+{
+    box-sizing: border-box;
+    margin-top: 30px;
 }
 
-main .pag-servicios .servicios{
-   padding: 3%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+section p
+{
+    text-align: justify;
+    margin-top: 15px;
+    margin-bottom: 30px;
 }
 
-main .servicios img{
-    max-width: 25%;
-}
-
-main .servicios > div{
-    padding: 0 5% 2%;
-}
-
-main .servicios .veterinaria{
-    display: flex;
-    justify-content: space-around;
-}
-
-main .servicios .peluqueria{
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row-reverse;
-
-}
-
-main .servicios .adopciones{
-    display: flex;
-    justify-content: space-around;
+section img /* imagenes */
+{
+    box-sizing: border-box;
+    width: 400px;
+    border: 0;
 }
 
 
-main section div .vet-int{
-    margin: 0% 30% 0% 3%;
-    display: flex;
-   flex-direction: column;
-   align-items: start;
+/* --------------- css de nosotros ----------------- */
+
+article /* contenedor para imagen+nombre+funcion */
+{
+    box-sizing: border-box;
+    height: 200px;
+    width: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-main section div .vet-int-ul{
-    padding: 2%;
+article img /* imagenes */
+{
+    box-sizing: border-box;
+    height: 150px;
+    border: 0;
 }
 
-main section div .pelu-int{
-    margin: 0% 3% 0% 30%;
-    display: flex;
-   flex-direction: column;
-   align-items: center;
-   
+article h5 /* nombres */
+{
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 20px;
 }
 
-main section div .adop-int{
-    margin: 0% 30% 0% 3%;
-
-    display: flex;
-   flex-direction: column;
-   align-items: center;
+article h6 /* funciones */
+{
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 16px;
 }
