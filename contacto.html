@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/estilos.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      crossorigin="anonymous"/>
+</head>
+<body>
+    <header class="header"></header>
+    <div class="container">
+
+        <form id="form">
+            <div>
+                <label for="username">Nombre y apellido</label>
+                <i class="fas fa-user"></i>
+                
+                <input
+                    type="text"
+                    name="username"
+                    id="username"
+                    placeholder="Juan Perez"
+                 />
+                
+                <i class="fas fa-exclamation-circle failure-icon"></i>
+                <i class="far fa-check-circle success-icon"></i>
+                
+                <div class="error"></div>
+            </div>
+            <div>
+                <label for="email">Correo Electrónico</label>
+                <i class="far fa-envelope"></i>
+                
+                <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="abc@gmail.com"
+                 />
+                
+                <i class="fas fa-exclamation-circle failure-icon"></i>
+                <i class="far fa-check-circle success-icon"></i>
+                
+                <div class="error"></div>
+            </div>
+            <div>
+                <label for="edad">Edad</label>
+                                
+                <input
+                    type="number"
+                    name="edad"
+                    id="name"
+                 />
+                
+                <i class="fas fa-exclamation-circle failure-icon"></i>
+                <i class="far fa-check-circle success-icon"></i>
+                
+                <div class="error"></div>
+            </div>
+            <div>
+                <label for="especie-de-mascota">Especie de mascota</label>
+                <i class=""></i>
+                
+                <input
+                    type="checkbox"
+                    name="email"
+                    id="correo-electrónico"
+                 />
+                
+                <i class="fas fa-exclamation-circle failure-icon"></i>
+                <i class="far fa-check-circle success-icon"></i>
+                
+                <div class="error"></div>
+            </div>
+            <button id="btn" type="submit">Enviar</button>
+        </form>
+        
+    </div>
+    <footer></footer>
+    <script src="./js/form.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

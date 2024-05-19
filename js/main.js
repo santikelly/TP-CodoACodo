@@ -1,12 +1,15 @@
 let meta=`<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PetShop Nombres</title>
-<link rel="stylesheet" href="./css/Estilos.css"><!--Hoja Stilo-->
+<link rel="stylesheet" href="./css/estilos.css"><!--Hoja Stilo-->
 <link rel="icon" href="./img/mascota icono.png"><!--Favicon-->
 <link rel="preconnect" href="https://fonts.googleapis.com"><!--fuente de googlefont-->
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https: //fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap"
-    rel="stylesheet">`
+    rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      crossorigin="anonymous"/>
+`
 
 document.querySelector("head").innerHTML=meta
 
@@ -22,7 +25,7 @@ let navegacion=`
      <li><a href="./Nosotros.html">Nosotros</a></li>
  </ul>
 </nav>
-<a href="./Registro.html" class="btn"><button>Contactenos</button></a>
+<a href="./contacto.html" class="btn"><button>Contactenos</button></a>
 `
 document.querySelector("header").innerHTML=navegacion
 
@@ -35,3 +38,5 @@ let pie=`
 `
 
 document.querySelector("footer").innerHTML=pie
+
+console.log('hola mundo')
