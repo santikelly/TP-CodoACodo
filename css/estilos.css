@@ -5,8 +5,28 @@
     margin: 0;
     padding: 0;
     font-family: "Radio Canada Big";
-    font-size: 25px;
-    
+    font-size: 24px;
+}
+
+h2 /* título página */
+{
+    box-sizing: border-box;
+    border: solid 1px;
+    font-size: 32px;
+    text-align: center;
+
+    padding: 16px 0px 16px 0px;
+    color: white;
+    background-color: #2a90b5;
+}
+
+h3 /* subtítulo página */
+{
+    box-sizing: border-box;
+    border: solid 1px;
+    font-size: 26px;
+    text-align: center;
+    border-radius: 5px;
 }
 
 /* --------------- css de header ------------------- */
@@ -184,32 +204,35 @@ justify-content: space-around;
 
 /* --------------- css de servicios ---------------- */
 
-h4 /* titulos de servicios */
+section ul /* listado de servicios */
+    {
+    list-style-type: none;
+    }
+
+section /* contenedor para servicios y nosotros */
 {
     box-sizing: border-box;
-    width: 100%;
+    padding: 30px 40px 30px 40px;
 }
 
-section /* contenedor para servicios */
+section a:hover /* vínculos señalados */
 {
-    box-sizing: border-box;
-    margin-top: 30px;
+    background-color:rgb(190, 225, 240);
 }
 
-section p
+section p /* párrafos */
 {
     text-align: justify;
     margin-top: 15px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
-section img /* imagenes */
+section img /* imágenes */
 {
     box-sizing: border-box;
     width: 400px;
     border: 0;
 }
-
 
 /* --------------- css de nosotros ----------------- */
 
@@ -242,3 +265,103 @@ article h6 /* funciones */
     text-align: center;
     font-size: 16px;
 }
+
+/* código para hacer columnas responsive */
+
+.linea::after   /* definición del formato de una línea */
+                /* se emplea el pseudo-elemento after */
+                /* clases cuyo nombre sea "linea" + "" */
+    {
+    content: "";
+    clear: both;
+    display: table;
+    }
+
+.menu ul /* definición del formato de los elementos ul dentro de la clase menu */
+    {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    }
+
+.menu li /* definición del formato de los elementos li dentro de la clase menu */
+    {
+    padding: 10px;
+    margin-bottom: 0px;
+    background-color: #33b5e5;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    }
+
+.menu li:hover /* modificación del formato de los elementos li dentro de la clase menu cuando se le pasa el ratón por encima */
+    {
+    background-color: #9933cc;
+    }
+
+
+[class*="col-"] /* definición del formato general de todas las clases de columnas */
+                /* se emplea selector de atributos */
+                /* clases cuyo nombre contenga "col-"" */
+    {
+    float: left;
+    padding: 5px;
+    }
+
+/* definición de anchos de columnas para diferentes dispositivos */
+/* inicialmente se asume que el dispositivo es un teléfono móvil */
+/* 100% corresponde al ancho total de la pantalla */
+
+/* para teléfonos móviles (ancho de ventana reducido) */
+/* todas las clases tendrán definido un ancho igual al 100% del ancho de la ventana */
+/* (las columnas ocuparán el 100% del ancho de la pantalla, por lo tanto aparecerán una debajo de la otra) */
+[class*="col-"]
+    {
+    width: 100%;
+    }
+
+/* para tabletas (ancho de ventana mayor o igual a 600 pixeles) */
+@media only screen and (min-width: 600px) /* media query & breakpoint */
+/* las siguientes propiedades se aplican si:
+    1) el navegador soporta queries (only)
+    2) el dispositivo tiene una pantalla (screen)
+    3) la ventana del navegador es mayor o igual a 600 pixeles (min-width) */
+/* las clases corresponden a columnas cuyos anchos varían entre 1/12 y 12/12 del ancho de la pantalla */
+/* en el cuerpo de la página se seleccion la clase a emplear para cada columna */
+    {
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+    }
+
+/* para computadoras de escritorio (ancho de ventana mayor o igual a 768 pixeles) */
+@media only screen and (min-width: 768px) /* media query & breakpoint */
+/* las siguientes propiedades se aplican si:
+    1) el navegador soporta queries (only)
+    2) el dispositivo tiene una pantalla (screen)
+    3) la ventana del navegador es mayor o igual a 768 pixeles (min-width) */
+/* las clases corresponden a columnas cuyos anchos varían entre 1/12 y 12/12 del ancho de la pantalla */
+/* en el cuerpo de la página se seleccion la clase a emplear para cada columna */
+    {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+    }
