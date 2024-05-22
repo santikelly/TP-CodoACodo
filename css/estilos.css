@@ -218,6 +218,7 @@ section /* contenedor para servicios */
 section a:hover /* vínculos señalados */
 {
     background-color:rgb(190, 225, 240);
+    animation: shakeX;
 }
 
 section p /* párrafos */
