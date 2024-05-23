@@ -98,6 +98,15 @@ body .index{
     max-width: 100%;
    
 }
+.carousel-inner {
+    max-width: 80%; /* Ajusta esto según sea necesario */
+    margin: auto;
+  }
+  
+.carousel-inner img {
+    width: 100%;
+    height: auto; /* Mantiene la proporción de aspecto */
+  }
 main .portada {
 
     height: 400px;
